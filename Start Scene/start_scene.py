@@ -3,8 +3,24 @@ username_list = []
 username_list.append(name)
 username = username_list[0]
 
-def welcome(welcoming):
-    return f"Hi {username} vaknar i en främmande värld med huvudverk. {username} vaknar i en säng med en främmande tjej (Sara) som byter ut en  varm handduk på din panna. Sara blir förvånad att {username} vaknar och hälsar på han “Äntligen är du vaken, trodde du va död en sekund där” 1. “Vem e du?” 2. “Var e jag?” 3. Skrik!"
+def intro(name):
+    return f"You a 50 year old man. Currently watching and dacing heavily to the new poopkai musik.\nOttoUnkown to you, you are a very heavy man, weighting at 300 pounds"
 
-result = welcome(username)
+def intro_disc(name):
+    return f"\n{name}-kun LOOVVESSS THIS!!!, *suddenly {name}-kuns ankel twists and he falls to his death*"
+
+def welcome(game):
+    return f"""
+
+ ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓█▓▒░░▒▓███████▓▒░▒▓████████▓▒░      
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░             
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░             
+░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓██████▓▒░        
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░             
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░             
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓███████▓▒░░▒▓████████▓▒░      
+                                                                 
+                                                                 
+"""
+result = intro(username) + intro_disc(username) + welcome(username)
 print(result)
