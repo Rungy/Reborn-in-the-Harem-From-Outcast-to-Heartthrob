@@ -27,7 +27,7 @@ def Rheascene1 (name):
 
 def Rheascene2 (name):
     global Rheapointtally
-    print(f"So whats your favorite position in yoga? *Rhea asks trying to strike conversation*")
+    print(f"So whats your favorite position in yoga {name}? *Rhea asks trying to strike conversation*")
 
     while True:
         choice2 = input('''Whats your response?
@@ -35,6 +35,18 @@ def Rheascene2 (name):
 2. Doggystyle
 3. I prefer dancing
 ''')
+        if choice2 == "1":
+            print(f"\nReally, what a coincedence thats my favorite too. *Time passes and you decide to leave her room*")
+            Rheapointtally += 3
+            break
+        if choice2 == "2":
+            print(f"\n*Rhea gives you a look of disgust, and asks you to leave her room*")
+            Rheapointtally -= 5
+            break
+        if choice2 == "3":
+            print(f"\n*Rhea gives you a look of disgust, and asks you to leave her room*")
+            Rheapointtally -= 5
+           
         
 Rheascene1(username)
 print(f"Rhea's point tally {Rheapointtally}")
