@@ -24,6 +24,17 @@ def Rheascene1 (name):
             break
         else:
             print("\nPlese enter one of the available numbers!")
+
+def Rheascene2 (name):
+    global Rheapointtally
+    print(f"So whats your favorite position in yoga? *Rhea asks trying to strike conversation*")
+
+    while True:
+        choice2 = input('''Whats your response?
+1. Downward dog 
+2. Doggystyle
+3. I prefer dancing
+''')
         
 Rheascene1(username)
 print(f"Rhea's point tally {Rheapointtally}")
