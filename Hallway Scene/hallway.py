@@ -1,7 +1,7 @@
 current_room = 0
 def hallway(name):
     global current_room
-    print(f"{name} enters the hallway a bit confused but he sees five doors with five different names on them")
+    print(f"\n{name} enters the hallway a bit confused but he sees five doors with five different names on them")
     while True:
         room_choice = input("""What room do you want to enter? 
 (following rooms are:)
@@ -10,8 +10,8 @@ def hallway(name):
 3-Zara
 4-Luna
 5-Mia
-(Write the number of the chosen room!)                                                                 
-""")
+(Write the number of the chosen room!): """)
+        current_room = 0
         if room_choice == "1":
             print(f"\n*{name} sneaks in Finn's room*")
             current_room += 1
