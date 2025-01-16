@@ -1,14 +1,35 @@
-username = "Arsalan"
+username = input("Name? ")
+
 Finnpointtally = 0
 Rheapointtally = 2
 Zarapointtally = 0
 Lunapointtally = 0 
 Miapointtally = 0 
 
+
+def intro(name):
+    print("You a 50 year old man. Currently watching and dacing heavily to the new poopkai musik.\n Unkown to you, you are a very heavy man, weighting at 300 pounds")
+    input("")
+    print(f"\n{name}-kun LOOVVESSS THIS!!!, *suddenly {name}-kuns ankel twists and he falls to his death*")
+    input("")
+    print("""
+
+ ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓█▓▒░░▒▓███████▓▒░▒▓████████▓▒░      
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░             
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░             
+░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓██████▓▒░        
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░             
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░             
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓███████▓▒░░▒▓████████▓▒░      
+                                                                 
+                                                                 
+""")
+    hallway(username)
+
 def hallway(name):
     print(f"\n{name} enters the hallway a bit stimulated")
     while True:
-        room_choice = input("""What room do you want to enter? 
+        room_choice = input("""\nWhat room do you want to enter? 
 (following rooms are:)
 1-Finn
 2-Rhea
@@ -130,4 +151,4 @@ def Rheascene2 (name):
         else:
             print("\nPlese enter one of the available numbers!")    
 
-hallo = hallway(username) 
+hallo = intro(username) 
