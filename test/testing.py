@@ -29,7 +29,7 @@ def intro(name):
 
 def hallway(name):
     print(f"\n{name} enters the hallway a bit stimulated")
-    while True:
+    while Finnpointtally <= 23 and Rheapointtally <= 23 and Zarapointtally <= 23 and Lunapointtally <= 23 and Miapointtally <= 23:
         room_choice = input("""\nWhat room do you want to enter? 
 (following rooms are:)
 1-Finn
@@ -54,6 +54,9 @@ def hallway(name):
                 if Rheapointtally>=0:
                     input("\nPress Enter..")
                     Rheascene2(name)
+                else:
+                    print("\nThe door is locked")
+                    input("\nPress Enter..")
             else:
                 print("\nThe door is locked")
                 input("\nPress Enter..")
@@ -81,6 +84,20 @@ def hallway(name):
         else:
             print(f"\nNot an available room {name} you stupid fuck")
             input("\nPress Enter..")
+    print("wait... is that a light?")
+    input("")
+    print("""
+▄▄▄█████▓ ██░ ██ ▓█████    ▓█████  ███▄    █ ▓█████▄ 
+▓  ██▒ ▓▒▓██░ ██▒▓█   ▀    ▓█   ▀  ██ ▀█   █ ▒██▀ ██▌
+▒ ▓██░ ▒░▒██▀▀██░▒███      ▒███   ▓██  ▀█ ██▒░██   █▌
+░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄    ▒▓█  ▄ ▓██▒  ▐▌██▒░▓█▄   ▌
+  ▒██▒ ░ ░▓█▒░██▓░▒████▒   ░▒████▒▒██░   ▓██░░▒████▓ 
+  ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░   ░░ ▒░ ░░ ▒░   ▒ ▒  ▒▒▓  ▒ 
+    ░     ▒ ░▒░ ░ ░ ░  ░    ░ ░  ░░ ░░   ░ ▒░ ░ ▒  ▒ 
+  ░       ░  ░░ ░   ░         ░      ░   ░ ░  ░ ░  ░ 
+          ░  ░  ░   ░  ░      ░  ░         ░    ░    
+                                              ░      
+""")
 
 def Rheascene1 (name):
     global Rheapointtally
