@@ -1,7 +1,12 @@
-current_room = 0
+username = "Arsalan"
+Finnpointtally = 0
+Rheapointtally = 2
+Zarapointtally = 0
+Lunapointtally = 0 
+Miapointtally = 0 
+
 def hallway(name):
-    global current_room
-    print(f"\n{name} enters the hallway a bit confused but he sees five doors with five different names on them")
+    print(f"\n{name} enters the hallway a bit stimulated")
     while True:
         room_choice = input("""What room do you want to enter? 
 (following rooms are:)
@@ -11,35 +16,37 @@ def hallway(name):
 4-Luna
 5-Mia
 (Write the number of the chosen room!): """)
-        current_room = 0
         if room_choice == "1":
-            print(f"\n*{name} sneaks in Finn's room*")
-            current_room += 1
-            break
+            if Finnpointtally >= 0:
+                print(f"\n*{name} sneaks in Finn's room*")
+            else:
+                print("\nThe door is locked")
         elif room_choice == "2":
-            print(f"\n*{name} sneaks in Rhea's room*")
-            current_room += 2
-            break
+            if Rheapointtally >= 0:
+                print(f"\n*{name} sneaks in Rhea's room*")
+                Rheascene1(name)
+                if Rheapointtally>=0:
+                    Rheascene2(name)
+            else:
+                print("\nThe door is locked")
         elif room_choice == "3":
-            print(f"\n*{name} sneaks in Zara's room*")
-            current_room += 3
-            break
+            if Zarapointtally >= 0:
+                print(f"\n*{name} sneaks in Zara's room*")
+            else:
+                print("\nThe door is locked")
         elif room_choice == "4":
-            print(f"\n*{name} sneaks in Luna's room*")
-            current_room += 4
-            break
+            if Lunapointtally >= 0:
+                print(f"\n*{name} sneaks in Luna's room*")
+            else:
+                print("\nThe door is locked")
         elif room_choice == "5":
-            print(f"\n*{name} sneaks in Mia's room*")
-            current_room += 5
-            break
+            if Miapointtally >= 0:
+                print(f"\n*{name} sneaks in Mia's room*")
+            else:
+                print("\nThe door is locked")
         else:
             print(f"\nNot an available room {name} you stupid fuck")
 
-username = "Arsalan"
-hallo = hallway(username)
-if current_room == 2:
-    Rheapointtally = 2
-username = "Arsalan"
 def Rheascene1 (name):
     global Rheapointtally
     print(f"\n*{name} enters Rhea's room, you quickly scan the room and catch Rhea doing her morning routine.*")
@@ -53,14 +60,17 @@ def Rheascene1 (name):
         if choice1 == "1":
             print(f"\n*{name} asks to join Rhea's yoga session, she nods and you join in*")
             Rheapointtally += 2
+            print(f"\n{Rheapointtally}")
             break
         elif choice1 == "2":
             print(f"\n*{name} stands and creeps on Rhea, she notices you staring and mutters to herself* \n-What a wierdo.")
             Rheapointtally -= 2
+            print(f"\n{Rheapointtally}")
             break
         elif choice1 == "3":
             print(f"\n*{name} runs up and hit Rhea across the head causing her to get a headache, she rubs her head in confusion* \n-WTH HELL IS WRONG WITH YOU? \n*She yells at you. {name} decides to apolegize, she forgives you but will not forget your actions*")
             Rheapointtally -= 3
+            print(f"\n{Rheapointtally}")
             break
         else:
             print("\nPlese enter one of the available numbers!")
@@ -76,12 +86,16 @@ def Rheascene2 (name):
 3. I prefer dancing
 ''')
         if choice2 == "1":
-            print(f"\nReally, what a coincedence thats my favorite too. *Time passes and you decide to leave her room*")
+            print(f"\nReally, what a coincedence thats my favorite too. *Time passes and {name} decides to leave her room*")
             Rheapointtally += 3
+            print(f"\n{Rheapointtally}")
+            hallway(username)
             break
         if choice2 == "2":
             print(f"\n*Rhea gives {name} a look of disgust, and asks you to leave her room*")
             Rheapointtally -= 5
+            print(f"\n{Rheapointtally}")
+            hallway(username)
             break
         if choice2 == "3":
             print(f"\nReally i didnt take you for a dancer. I challange you to a dance battle!")
@@ -96,20 +110,24 @@ def Rheascene2 (name):
                 if choice3 == "1":
                     print(f"\n*Rhea notices {name} going easy on her and gets dissapointed. {name} leaves her room*")
                     Rheapointtally -= 2
+                    print(f"\n{Rheapointtally}")
+                    hallway(username)
                     break
                 if choice3 == "2":
                     print(f"\n*{name} goes crazy and get sturdy on her ass, she smiles as you defeat her and blows {name} a kiss as you leave her room*")
                     Rheapointtally += 4
+                    print(f"\n{Rheapointtally}")
+                    hallway(username)
                     break
                 if choice3 == "3":
                     print(f"\n*{name} start dancing matching her tempo creating a fun and flirty atmopshere, she kisses {name}'s cheek before you leave her room*")
+                    print(f"\n{Rheapointtally}")
+                    hallway(username)
                     break
                 else: 
                      print("\nPlese enter one of the available numbers!")
             break
         else:
-            print("\nPlese enter one of the available numbers!")     
-Rheascene1(username)
-print(f"Rhea's point tally {Rheapointtally}")
-Rheascene2 (username)
-print(f"Rhea's point tally {Rheapointtally}")
+            print("\nPlese enter one of the available numbers!")    
+
+hallo = hallway(username) 
