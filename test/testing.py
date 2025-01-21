@@ -6,7 +6,58 @@ Rheapointtally = 2
 Zarapointtally = 0
 Lunapointtally = 0 
 Miapointtally = 0 
+tot = False
 
+def guide(name):
+    global tot
+    while True:
+        answere = input("\nDu you want a tutorial? answere with yes or no ")
+        if answere == "Yes":
+            tot = True
+            break
+        elif answere == "ja":
+            tot = True
+            break
+        elif answere == "yes":
+            tot = True
+            break
+        elif answere == "Ja":
+            tot = True
+            break
+        elif answere == "No":
+            tot = False
+            break
+        elif answere == "no":
+            tot = False
+            break
+        elif answere == "nej":
+            tot = False
+            break
+        elif answere == "Nej":
+            tot = False
+            break
+        else:
+            print("\nYou haven't answered me clearly? ")
+    while True:
+        if tot == True:
+            print("\nAll you have to do is answere correct to questions... all action have consequences!")
+            tot = False
+        else:
+            input("\nPress Enter..")
+            print("██████╗ ███████╗██████╗  ██████╗ ██████╗ ███╗   ██╗    ██╗███╗   ██╗    ██╗  ██╗ █████╗ ██████╗ ███████╗███╗   ███╗")
+            time.sleep(0.07)
+            print("██╔══██╗██╔════╝██╔══██╗██╔═══██╗██╔══██╗████╗  ██║    ██║████╗  ██║    ██║  ██║██╔══██╗██╔══██╗██╔════╝████╗ ████║")
+            time.sleep(0.07)
+            print("██████╔╝█████╗  ██████╔╝██║   ██║██████╔╝██╔██╗ ██║    ██║██╔██╗ ██║    ███████║███████║██████╔╝█████╗  ██╔████╔██║")
+            time.sleep(0.07)
+            print("██╔══██╗██╔══╝  ██╔══██╗██║   ██║██╔══██╗██║╚██╗██║    ██║██║╚██╗██║    ██╔══██║██╔══██║██╔══██╗██╔══╝  ██║╚██╔╝██║")
+            time.sleep(0.07)
+            print("██║  ██║███████╗██████╔╝╚██████╔╝██║  ██║██║ ╚████║    ██║██║ ╚████║    ██║  ██║██║  ██║██║  ██║███████╗██║ ╚═╝ ██║")
+            time.sleep(0.07)
+            print("╚═╝  ╚═╝╚══════╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝    ╚═╝╚═╝  ╚═══╝    ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝")
+            input("\nPress Enter..")
+            intro(name)
+            break
 
 def intro(name):
     print("You a 50 year old man. Currently watching and dacing heavily to the new poopkai musik.\n Unkown to you, you are a very heavy man, weighting at 300 pounds")
@@ -84,23 +135,31 @@ def hallway(name):
             else:
                 print("\nThe door is locked")
                 input("\nPress Enter..")
-        else:
-            print(f"\nNot an available room {name} you stupid fuck")
-            input("\nPress Enter..")
+        
+    print(f"\nNot an available room {name} you stupid fuck")
+    input("\nPress Enter..")
     print("wait... is that a light?")
-    input("")
-    print("""
-▄▄▄█████▓ ██░ ██ ▓█████    ▓█████  ███▄    █ ▓█████▄ 
-▓  ██▒ ▓▒▓██░ ██▒▓█   ▀    ▓█   ▀  ██ ▀█   █ ▒██▀ ██▌
-▒ ▓██░ ▒░▒██▀▀██░▒███      ▒███   ▓██  ▀█ ██▒░██   █▌
-░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄    ▒▓█  ▄ ▓██▒  ▐▌██▒░▓█▄   ▌
-  ▒██▒ ░ ░▓█▒░██▓░▒████▒   ░▒████▒▒██░   ▓██░░▒████▓ 
-  ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░   ░░ ▒░ ░░ ▒░   ▒ ▒  ▒▒▓  ▒ 
-    ░     ▒ ░▒░ ░ ░ ░  ░    ░ ░  ░░ ░░   ░ ▒░ ░ ▒  ▒ 
-  ░       ░  ░░ ░   ░         ░      ░   ░ ░  ░ ░  ░ 
-          ░  ░  ░   ░  ░      ░  ░         ░    ░    
-                                              ░      
-""")
+    input("\nPress Enter..")
+    print("▄▄▄█████▓ ██░ ██ ▓█████    ▓█████  ███▄    █ ▓█████▄ ")
+    time.sleep(0.07)
+    print("▓  ██▒ ▓▒▓██░ ██▒▓█   ▀    ▓█   ▀  ██ ▀█   █ ▒██▀ ██▌")
+    time.sleep(0.07)
+    print("▒ ▓██░ ▒░▒██▀▀██░▒███      ▒███   ▓██  ▀█ ██▒░██   █▌")
+    time.sleep(0.07)
+    print("░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄    ▒▓█  ▄ ▓██▒  ▐▌██▒░▓█▄   ▌")
+    time.sleep(0.07)
+    print("  ▒██▒ ░ ░▓█▒░██▓░▒████▒   ░▒████▒▒██░   ▓██░░▒████▓ ")
+    time.sleep(0.07)
+    print("  ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░   ░░ ▒░ ░░ ▒░   ▒ ▒  ▒▒▓  ▒ ")
+    time.sleep(0.07)
+    print("    ░     ▒ ░▒░ ░ ░ ░  ░    ░ ░  ░░ ░░   ░ ▒░ ░ ▒  ▒ ")
+    time.sleep(0.07)
+    print("  ░       ░  ░░ ░   ░         ░      ░   ░ ░  ░ ░  ░ ")
+    time.sleep(0.07)
+    print("          ░  ░  ░   ░  ░      ░  ░         ░    ░    ")
+    time.sleep(0.07)
+    print("                                              ░      ")
+
 
 def Rheascene1 (name):
     global Rheapointtally
@@ -286,4 +345,4 @@ def Finn(name):
         input("\nPress Enter..")
         print("Ingen mer lek, ingen mer fasad. Bara du och jag… för alltid.")
 
-hallo = intro(username) 
+guide(username)
