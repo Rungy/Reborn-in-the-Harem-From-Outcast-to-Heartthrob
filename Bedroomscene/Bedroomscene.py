@@ -1,6 +1,15 @@
 username = "Arsalan"
-
+Rheatalk = False
+Finntalk = False
+Zaratalk = False
+Lunatalk = False
+Miatalk = False
 def bedroomscenewakeup (name):
+    global Rheatalk
+    global Finntalk
+    global Zaratalk
+    global Lunatalk
+    global Miatalk
     print(f"\n*{name} feels their life slowly fading until it's total darkness")
     input("\nPress Enter..")
     print(f"\nBut {name} concioussnes remains and he feels an odd sensation down there as he waits for what feels like an eternity in slience.")
@@ -29,9 +38,65 @@ def bedroomscenewakeup (name):
 3. Figur 3
 4. Figur 4
 5. Figur 5
+6. Säg till dom att lämna rummet
 """)
         input("\nPress Enter..")
         if introduction == "1":
-            print(f"")
+            if Rheatalk == False:
+                print(f"\nVem är du, var e jag? *Frågar {name}*")
+                input("\nPress Enter..")
+                print(f"\nVar it orolig, du är säker här. *Svarar figuren*")
+                input("\nPress Enter..")
+                print(f"\nMitt namn är Rhea, vi hittade dig medvetslös på marken och valde att ta in dig i vårat hem")
+                input("\nPress Enter..")
+                print(f"\nTack... *{name} svarar svagt*")
+                input("\nPress Enter..")
+                Rheatalk = True
+            else:
+                print("\nDu har redan pratat med denna person")
 
+            
+        elif introduction == "2":
+            if Finntalk == False:
+                print(f"\nVem är du då? *Frågar {name}*")
+                input("\nPress Enter..")
+                print("\nMitt namn är Finn sötnos. *Säger figuren flörtsamt och blåser en puss*")
+                input("\nPress Enter..")
+                Finntalk = True
+            else: 
+                print("\nDu har redan pratat med denna person")
+        elif introduction == "3":
+            if Zaratalk == False:
+                print(f"\noch vem är du? *Frågar {name}*")
+                input("\nPress Enter..")
+                print("\nJag heter Zara. *muttrar figuren utan att kolla upp från sin bok*")
+                input("\nPress Enter..")
+                Zaratalk = True
+            else:
+                print("\nDu har redan pratat med denna person")
+        elif introduction == "4":
+            if Lunatalk == False:
+                print(f"\ndu då? *Frågar {name}*")
+                input("\nPress Enter..")
+                print("\nNamnet är Luna, trevligt att råkas hjärtat *Säger figuren medans hon leker med sitt långa mörka hår*")
+                input("\nPress Enter..")
+                Lunatalk = True
+            else:
+                print("\nDu har redan pratat med denna person")
+        elif introduction == "5":
+            if Miatalk == False:
+                print(f"\n Ditt namn? *Frågar {name}*")
+                input("\nPress Enter..")
+                print(f"Mia, säger det bara en gång. *Säger figuren medans hon suckar*")
+                input("\nPress Enter..")
+                Miatalk = True
+            else:
+                print("\nDu har redan pratat med denna person")
+        elif introduction == "6":
+            print(f"Kan jag få lite ensam tid? *Frågar {name}*")
+            input("\nPress Enter..")
+            print(f"*Figurenerna lyssnar på dig och lämnar ditt rum*")
+            input("\nPress Enter..")
+            break
 bedroomscenewakeup(username)
+
