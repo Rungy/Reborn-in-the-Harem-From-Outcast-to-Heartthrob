@@ -4,6 +4,8 @@ Finntalk = False
 Zaratalk = False
 Lunatalk = False
 Miatalk = False
+Napcount = 0
+Napdeath = False
 def bedroomscenewakeup (name):
     global Rheatalk
     global Finntalk
@@ -98,5 +100,35 @@ def bedroomscenewakeup (name):
             print(f"*Figurenerna lyssnar på dig och lämnar ditt rum*")
             input("\nPress Enter..")
             break
+def napfunktion (name):
+    global Napdeath
+    global Napcount
+    roomchoice = input("""\n
+1. Ta en tuplur
+2. Utforska din nya omgivning
+3. Lämna rummet
+""")
+    input("\nPress Enter..")
+    if roomchoice == "1":
+        print(f"\n*{name} sjunker djupt in i sin säng och sluter ögonen")
+        input("\nPress Enter..")
+        print(f"\n*Tid passerar och {name} vaknar tillslut")
+        input("\nPress Enter..")
+        Napcount += 1
+        if Napcount == 3:
+            Napdeath = True
+    elif roomchoice == "2":
+        print(f"\n*{name} ställer sig up från sin säng o kollar runt rummet")
+        input("\nPress Enter..")
+        input(f"""\n
+{name} Tar en snabb titt runt sitt rum, välj ditt nästa drag
+1. Ta en titt på boken bredvid dig
+2. 
+
+
+""")
+        
+
+ 
 bedroomscenewakeup(username)
 
