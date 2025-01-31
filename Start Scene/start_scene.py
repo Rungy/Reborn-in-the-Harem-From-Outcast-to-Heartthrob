@@ -8,6 +8,7 @@ def intro(name):
     input("Enter to continue")
     print(f"\n{name}-kun LOOVVESSS THIS!!!, *suddenly {name}-kuns ankel twists and he falls to his death*")
     input("Enter to continue")
+    playsound("sound")
     print("""
 
  ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓█▓▒░░▒▓███████▓▒░▒▓████████▓▒░      

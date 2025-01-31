@@ -1,7 +1,7 @@
 Zarapointtally = 0
 username = "Player"
 
-def enter_room(name):
+def zara_room(name):
     global Zarapointtally
     print(f"\n*{name} enters the room, Zara looks up and greets you.*")
 
@@ -52,6 +52,12 @@ def watch_movie(name):
     print(f"\n*{name} and Zara watch a movie together, creating a warm and friendly atmosphere.*")
     print(f"\n*Zara seems impressed by your company.*")
     Zarapointtally += 3
+    if Zarapointtally > 5:
+        print("\nCongratulations! You won Zara's love.")
+    elif Zarapointtally > 0:
+        print("\nYou left a positive impression on Zara.")
+    else:
+        print("\nYou might need to work on your social skills!")
 
 # Start of the game
 print("Welcome to the Zara interaction game!")

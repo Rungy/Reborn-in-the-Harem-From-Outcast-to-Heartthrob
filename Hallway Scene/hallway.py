@@ -19,6 +19,8 @@ def hallway(name):
         elif room_choice == "2":
             print(f"\n*{name} sneaks in Rhea's room*")
             current_room += 2
+            Rheascene1(name)
+            Rheascene2(name)
             break
         elif room_choice == "3":
             print(f"\n*{name} sneaks in Zara's room*")

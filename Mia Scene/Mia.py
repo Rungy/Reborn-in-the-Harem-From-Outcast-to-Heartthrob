@@ -1,7 +1,7 @@
 Miapointtally = 0
 username = "Player"
 
-def enter_room(name):
+def mia_room(name):
     global Miapointtally
     print(f"\n*{name} enters the room, Mia looks up.*")
 
@@ -21,6 +21,13 @@ def enter_room(name):
             break
         else:
             print("\nPlease enter one of the available numbers!")
+    
+    if Miapointtally > 1:
+        print("\nCongratulations! You gained some points, but at a cost.")
+    elif Miapointtally == 0:
+        print("\nZara is indifferent to your presence.")
+    else:
+        print("\nYou might need to rethink your approach!")
 
 # Start of the game
 print("Welcome to the Mia interaction game!")
