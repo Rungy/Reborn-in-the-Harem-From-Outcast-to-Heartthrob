@@ -1,23 +1,27 @@
-import time
-username = input("Vad heter du? ")
+#Importerar time modulen för våra animationer
+import time 
 
+#Sparar användarens namn för dialoger
+username = input("Vad heter du? ") 
+
+#Start poäng för karaktär relationer
 Finnpointtally = 4
 Rheapointtally = 2
 Zarapointtally = 0
 Lunapointtally = 0 
 Miapointtally = 0 
 
+#Variabel för om användare vill ha tutorial guide
 tot = False
 
+#Variabler som gör så att man bara kan prata med karaktärerna en gång vid Bedroomscene
 Rheatalk = False
 Finntalk = False
 Zaratalk = False
 Lunatalk = False
 Miatalk = False
 
-Napcount = 0
-Napdeath = False
- 
+#Funktion om man vill ha guide eller inte
 def guide(name):
     global tot
     while True:
@@ -59,6 +63,7 @@ def guide(name):
             print("\nVi rekommenderar starkt Rhea och Finn, men alla rum är lite spännande.")
 
             tot = False
+            #Start animation
         else:
             input("\nTryck på Enter..")
             print("██████╗ ███████╗██████╗  ██████╗ ██████╗ ███╗   ██╗    ██╗███╗   ██╗    ██╗  ██╗ █████╗ ██████╗ ███████╗███╗   ███╗")
@@ -75,7 +80,7 @@ def guide(name):
             input("\nTryck på Enter..")
             intro(name)
             break
-
+#Funktion till introduktion av spelet
 def intro(name):
     print("Du är en 50-årig man. Just nu tittar och dansar du intensivt till den nya poopkai-musiken.\n Ovetandes om att du är en väldigt tung man, väger du 300 pund.")
     input("\nTryck på Enter..")
@@ -97,8 +102,9 @@ def intro(name):
 
     input("\nTryck på Enter..") 
     bedroomscenewakeup(name)
-
+#Funktion till bedroomscene
 def bedroomscenewakeup (name):
+    #Använder alla "talk" variabler för att bara kunna prata med karaktärerna en gång
     global Rheatalk
     global Finntalk
     global Zaratalk
@@ -135,6 +141,7 @@ def bedroomscenewakeup (name):
 6. Säg till dom att lämna rummet
 """)
         input("\nTryck på Enter..")
+        #Snabb och kort introduktion av karaktärer
         if introduction == "1":
             if Rheatalk == False:
                 print(f"\nVem är du, var e jag? *Frågar {name}*")
@@ -181,7 +188,7 @@ def bedroomscenewakeup (name):
             if Miatalk == False:
                 print(f"\n Ditt namn? *Frågar {name}*")
                 input("\nTryck på Enter..")
-                print(f"Mia, säger det bara en gång. *Säger figuren medans hon suckar*")
+                print(f"\nMia, säger det bara en gång. *Säger figuren medans hon suckar*")
                 input("\nTryck på Enter..")
                 Miatalk = True
             else:
@@ -189,14 +196,16 @@ def bedroomscenewakeup (name):
         elif introduction == "6":
             print(f"Kan jag få lite ensam tid? *Frågar {name}*")
             input("\nTryck på Enter..")
-            print(f"*Figurenerna lyssnar på dig och lämnar ditt rum*")
+            print(f"*\nFigurenerna lyssnar på dig och lämnar ditt rum*")
             input("\nTryck på Enter..")
+            print(f"\n*Tid har passerat och du väljer att utforska ditt nya hem*")
             input("\nTryck på Enter..")
             hallway(name)
             break
-
+#Funktion för Hallway 
 def hallway(name):
     print(f"\n{name} går in i hallen, lite stimulerad")
+    #Om "point tally variabler"
     while Finnpointtally <= 23 and Rheapointtally <= 23 and Zarapointtally <= 23 and Lunapointtally <= 23 and Miapointtally <= 23:
         room_choice = input("""\nVilket rum vill du gå in i? 
 (följande rum finns:)
@@ -371,7 +380,7 @@ def Rheascene2(name):
                     hallway(name)
                     break
                 if choice3 == "3":
-                    print(f"\n*{name} börjar dansa och matchar hennes tempo, skapar en rolig och flörtig atmosfär, hon kysser {name} på kinden innan du lämnar hennes rum*")
+                    print(f"\n*{name} börjar dansa och matchar hennes tempo, skapar en rolig och flörtig atmosfär*")
                     print(f"\n{Rheapointtally}")
                     input("\nTryck på Enter..")
                     hallway(name)
@@ -382,7 +391,26 @@ def Rheascene2(name):
             break
         else:
             print("\nVänligen ange ett av de tillgängliga numren!")
-            input("\nTryck på Enter..")  
+            input("\nTryck på Enter..")
+    if 23 >= Rheapointtally >= 8:
+        print(f"\n*Hon lutar sig tillbaka med ett mjukt leende, sträcker ut en hand och snuddar vid din fingertopp som om hon inte riktigt vill släppa taget* \nDu vet… jag trivs verkligen med dig. Det känns tryggt, på något sätt. Så, lova mig att du kommer tillbaka snart, okej?")
+        input("\nTryck på Enter..")
+    elif 7 >= Rheapointtally >= 0:
+        print(f"\n*Hon lutar huvudet åt sidan, studerar dig ett ögonblick med en eftertänksam min medan hon långsamt trummar med fingrarna mot bordet* \nTja… det kunde ha varit värre. Men du har en lång väg kvar att gå, älskling. Frågan är… har du vad som krävs?")
+        input("\nTryck på Enter..")
+    elif Rheapointtally <= -1:
+        print(f"\n*Hon stelnar till, spänner käken och drar armarna om sig själv som för att skapa distans mellan er* \nÄr det verkligen så här du ser på mig? Jag… jag trodde att du förstod. Men tydligen hade jag fel. Gå. Innan jag bryr mig ännu mindre.")
+        input("\nTryck på Enter..")
+    elif Rheapointtally >= 24:
+        print("*Hon fryser mitt i en rörelse, som om något inom henne precis fallit på plats.*")
+        input("\nTryck på Enter..")
+        print("*Långsamt andas hon ut, och när hon ser upp på dig är hennes blick annorlunda – klar, öppen, som om alla fasader har fallit bort.*")
+        input("\nTryck på Enter..")
+        print("Så… det är så här det känns? Att inte behöva låtsas?")
+        input("\nTryck på Enter..")
+        print("*Hon rör sig närmare, lyfter en hand och låter försiktigt fingertopparna spåra en linje över din kind, som om hon försöker memorera ögonblicket.*")
+        input("\nTryck på Enter..")
+        print("Inga fler masker. Ingen mer osäkerhet. Bara vi… tillsammans, på riktigt.")    
 
 def Finn(name):
     global Finnpointtally
@@ -462,6 +490,7 @@ def Finn(name):
     elif Finnpointtally <= -1:
         print(f"\n*Han vänder demonstrativt ryggen till, armarna i kors, och suckar dramatiskt* \nUgh! Jag trodde du förstod mig, men tydligen inte. Gå. Innan jag blir ännu mer besviken")
         input("\nTryck på Enter..")
+        #Om Finnpointtally är 24 eller mer så får du FinnsEnding
     elif Finnpointtally >= 24:
         print("*Han stirrar på dig ett ögonblick, som om han just insett något otroligt*")
         input("\nTryck på Enter..")
