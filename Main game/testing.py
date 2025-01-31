@@ -1,25 +1,28 @@
 import time
-username = input("Name? ")
+username = input("Vad heter du? ")
 
 Finnpointtally = 4
 Rheapointtally = 2
 Zarapointtally = 0
 Lunapointtally = 0 
 Miapointtally = 0 
+
 tot = False
+
 Rheatalk = False
 Finntalk = False
 Zaratalk = False
 Lunatalk = False
 Miatalk = False
+
 Napcount = 0
 Napdeath = False
  
 def guide(name):
     global tot
     while True:
-        answere = input("\nDu you want a tutorial? answere with yes or no ")
-        if answere == "Yes":
+        answere = input("\nVill du ha en handledning? Svara med ja eller nej ")
+        if answere == "Ja":
             tot = True
             break
         elif answere == "ja":
@@ -28,36 +31,36 @@ def guide(name):
         elif answere == "yes":
             tot = True
             break
-        elif answere == "Ja":
+        elif answere == "Yes":
             tot = True
             break
-        elif answere == "No":
-            tot = False
-            break
-        elif answere == "no":
+        elif answere == "Nej":
             tot = False
             break
         elif answere == "nej":
             tot = False
             break
-        elif answere == "Nej":
+        elif answere == "no":
+            tot = False
+            break
+        elif answere == "No":
             tot = False
             break
         else:
-            print("\nYou haven't answered me clearly? ")
+            print("\nDu svarade inte tydligt.")
     while True:
         if tot == True:
-            print("\nAll you have to do is answere correct to questions... all action have consequences!")
-            input("\nPress Enter..")
-            print("\nYou have to do some rooms multiple times to get the true ending of the game otherwise the game never ends.")
-            input("\nPress Enter..")
-            print("\nAs you might be aware of this was a group project so some of the rooms are a bit under developed.")
-            input("\nPress Enter..")
-            print("\nWe strongly recommend Rhea and Finn but all the same every room is a bit spicy.")
+            print("\nAllt du behöver göra är att svara rätt på frågor... alla handlingar har konsekvenser!")
+            input("\nTryck på Enter..")
+            print("\nDu måste göra vissa rum flera gånger för att få det sanna slutet av spelet, annars slutar spelet aldrig.")
+            input("\nTryck på Enter..")
+            print("\nSom du kanske är medveten om var detta ett gruppprojekt, så vissa rum är lite underutvecklade.")
+            input("\nTryck på Enter..")
+            print("\nVi rekommenderar starkt Rhea och Finn, men alla rum är lite spännande.")
 
             tot = False
         else:
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
             print("██████╗ ███████╗██████╗  ██████╗ ██████╗ ███╗   ██╗    ██╗███╗   ██╗    ██╗  ██╗ █████╗ ██████╗ ███████╗███╗   ███╗")
             time.sleep(0.07)
             print("██╔══██╗██╔════╝██╔══██╗██╔═══██╗██╔══██╗████╗  ██║    ██║████╗  ██║    ██║  ██║██╔══██╗██╔══██╗██╔════╝████╗ ████║")
@@ -69,15 +72,15 @@ def guide(name):
             print("██║  ██║███████╗██████╔╝╚██████╔╝██║  ██║██║ ╚████║    ██║██║ ╚████║    ██║  ██║██║  ██║██║  ██║███████╗██║ ╚═╝ ██║")
             time.sleep(0.07)
             print("╚═╝  ╚═╝╚══════╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝    ╚═╝╚═╝  ╚═══╝    ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝")
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
             intro(name)
             break
 
 def intro(name):
-    print("You a 50 year old man. Currently watching and dacing heavily to the new poopkai musik.\n Unkown to you, you are a very heavy man, weighting at 300 pounds")
-    input("Enter to continue")
-    print(f"\n{name}-kun LOOVVESSS THIS!!!, *suddenly {name}-kuns ankel twists and he falls to his death*")
-    input("Enter to continue")
+    print("Du är en 50-årig man. Just nu tittar och dansar du intensivt till den nya poopkai-musiken.\n Ovetandes om att du är en väldigt tung man, väger du 300 pund.")
+    input("\nTryck på Enter..")
+    print(f"\n{name}-kun ÄLSKAR DETTA!!!, *plötsligt vrider {name}-kun sin fot och faller till sin död*")
+    input("\nTryck på Enter..")
     print("  ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓█▓▒░░▒▓███████▓▒░▒▓████████▓▒░")
     time.sleep(0.07)
     print(" ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░")
@@ -92,7 +95,7 @@ def intro(name):
     time.sleep(0.07)
     print(" ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓███████▓▒░░▒▓████████▓▒░")
 
-    input("\nPress Enter..")    
+    input("\nTryck på Enter..") 
     bedroomscenewakeup(name)
 
 def bedroomscenewakeup (name):
@@ -101,26 +104,26 @@ def bedroomscenewakeup (name):
     global Zaratalk
     global Lunatalk
     global Miatalk
-    print(f"\n*{name} feels their life slowly fading until it's total darkness")
-    input("\nPress Enter..")
-    print(f"\nBut {name} concioussnes remains and he feels an odd sensation down there as he waits for what feels like an eternity in slience.")
-    input("\nPress Enter..")
-    print(f"\n*Then suddenly {name} hears a voice and the darkness is no more*")
-    input("\nPress Enter..")
-    print("\nMister wake up mister!")
-    input("\nPress Enter..")
-    print(f"\n{name} slowly starts to open their eyes, {name} sees 5 foreign figures with nice curves.")
-    input("\nPress Enter..")
+    print(f"\n*{name} känner hur livet långsamt försvinner tills det blir totalt mörker*")
+    input("\nTryck på Enter..") 
+    print(f"\nMen {name}s medvetande kvarstår och han känner en underlig känsla där nere medan han väntar i vad som känns som en evighet i tystnad.")
+    input("\nTryck på Enter..") 
+    print(f"\n*Plötsligt hör {name} en röst och mörkret försvinner*")
+    input("\nTryck på Enter..") 
+    print("\nHerrn, vakna herrn!")
+    input("\nTryck på Enter..") 
+    print(f"\n{name} börjar långsamt öppna sina ögon och ser 5 främmande figurer med vackra kurvor.")
+    input("\nTryck på Enter..") 
     print("\nDen första figuren har isblå ögon som genomborrar sin omgivning med skarp intelligens. Hennes tjocka, mörka hår faller elegant runt hennes ansikte och förstärker hennes kraftfulla utstrålning. Hennes drag är skarpa, med höga kindben och en stark käklinje. Hennes kropp är smidig och ståtlig, med en rak och självsäker hållning.")
-    input("\nPress Enter..")
-    print("\nDen andra figuren  har livliga, ljusgröna ögon som gnistrar av nyfikenhet och lekfullhet. Hans mjuka, vågiga hår är ljusbrunt och faller nonchalant runt ansiktet. Hans drag är androgyna och harmoniska, med höga kindben och en uttrycksfull mun. Hans kropp är smidig och graciös, med en avslappnad men självsäker hållning. ")
-    input("\nPress Enter..")
-    print("\nDen Tredje figuren har djupvioletta ögon som tycks rymma hela universum, alltid drömska men skarpa. Hennes långa, mörkblå hår faller i mjuka vågor runt hennes bleka ansikte. Hennes drag är fina och eteriska, med höga kindben och en smal, elegant näsa. Hennes kropp är smal och smidig, med en lugn och nästan svävande närvaro.")
-    input("\nPress Enter..")
-    print("\nhar mjuka, ljusbruna ögon som glittrar av värme och drömmar. Hennes långa, gyllene hår faller i lösa vågor runt hennes ansikte. Hennes drag är mjuka och harmoniska, med rosiga kinder och ett varmt leende. Hennes kropp är smal och graciös, med en avslappnad och nästan svävande närvaro.")
-    input("\nPress Enter..")
-    print("\nhar skarpa, grå ögon som blixtrar av intelligens och attityd. Hennes korta, svartfärgade hår är rufsigt och nonchalant stylat. Hennes drag är distinkta, med höga kindben och en markerad käklinje. Hennes kropp är smidig och stark, med en självsäker och avslappnad hållning.")
-    input("\nPress Enter..")
+    input("\nTryck på Enter..") 
+    print("\nDen andra figuren har livliga, ljusgröna ögon som gnistrar av nyfikenhet och lekfullhet. Hans mjuka, vågiga hår är ljusbrunt och faller nonchalant runt ansiktet. Hans drag är androgyna och harmoniska, med höga kindben och en uttrycksfull mun. Hans kropp är smidig och graciös, med en avslappnad men självsäker hållning.")
+    input("\nTryck på Enter..") 
+    print("\nDen tredje figuren har djupvioletta ögon som tycks rymma hela universum, alltid drömska men skarpa. Hennes långa, mörkblå hår faller i mjuka vågor runt hennes bleka ansikte. Hennes drag är fina och eteriska, med höga kindben och en smal, elegant näsa. Hennes kropp är smal och smidig, med en lugn och nästan svävande närvaro.")
+    input("\nTryck på Enter..") 
+    print("\nDen fjärde figuren har mjuka, ljusbruna ögon som glittrar av värme och drömmar. Hennes långa, gyllene hår faller i lösa vågor runt hennes ansikte. Hennes drag är mjuka och harmoniska, med rosiga kinder och ett varmt leende. Hennes kropp är smal och graciös, med en avslappnad och nästan svävande närvaro.")
+    input("\nTryck på Enter..") 
+    print("\nDen femte figuren har skarpa, grå ögon som blixtrar av intelligens och attityd. Hennes korta, svartfärgade hår är rufsigt och nonchalant stylat. Hennes drag är distinkta, med höga kindben och en markerad käklinje. Hennes kropp är smidig och stark, med en självsäker och avslappnad hållning.")
+    input("\nTryck på Enter..") 
 
     while True:
         introduction = input(f"""\nWho do you decide to talk to first?
@@ -131,17 +134,17 @@ def bedroomscenewakeup (name):
 5. Figur 5
 6. Säg till dom att lämna rummet
 """)
-        input("\nPress Enter..")
+        input("\nTryck på Enter..")
         if introduction == "1":
             if Rheatalk == False:
                 print(f"\nVem är du, var e jag? *Frågar {name}*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 print(f"\nVar it orolig, du är säker här. *Svarar figuren*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 print(f"\nMitt namn är Rhea, vi hittade dig medvetslös på marken och valde att ta in dig i vårat hem")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 print(f"\nTack... *{name} svarar svagt*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 Rheatalk = True
             else:
                 print("\nDu har redan pratat med denna person")
@@ -150,119 +153,120 @@ def bedroomscenewakeup (name):
         elif introduction == "2":
             if Finntalk == False:
                 print(f"\nVem är du då? *Frågar {name}*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 print("\nMitt namn är Finn sötnos. *Säger figuren flörtsamt och blåser en puss*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 Finntalk = True
             else: 
                 print("\nDu har redan pratat med denna person")
         elif introduction == "3":
             if Zaratalk == False:
                 print(f"\noch vem är du? *Frågar {name}*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 print("\nJag heter Zara. *muttrar figuren utan att kolla upp från sin bok*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 Zaratalk = True
             else:
                 print("\nDu har redan pratat med denna person")
         elif introduction == "4":
             if Lunatalk == False:
                 print(f"\ndu då? *Frågar {name}*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 print("\nNamnet är Luna, trevligt att råkas hjärtat *Säger figuren medans hon leker med sitt långa mörka hår*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 Lunatalk = True
             else:
                 print("\nDu har redan pratat med denna person")
         elif introduction == "5":
             if Miatalk == False:
                 print(f"\n Ditt namn? *Frågar {name}*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 print(f"Mia, säger det bara en gång. *Säger figuren medans hon suckar*")
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 Miatalk = True
             else:
                 print("\nDu har redan pratat med denna person")
         elif introduction == "6":
             print(f"Kan jag få lite ensam tid? *Frågar {name}*")
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
             print(f"*Figurenerna lyssnar på dig och lämnar ditt rum*")
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
+            input("\nTryck på Enter..")
             hallway(name)
             break
 
 def hallway(name):
-    print(f"\n{name} enters the hallway a bit stimulated")
+    print(f"\n{name} går in i hallen, lite stimulerad")
     while Finnpointtally <= 23 and Rheapointtally <= 23 and Zarapointtally <= 23 and Lunapointtally <= 23 and Miapointtally <= 23:
-        room_choice = input("""\nWhat room do you want to enter? 
-(following rooms are:)
+        room_choice = input("""\nVilket rum vill du gå in i? 
+(följande rum finns:)
 1-Finn
 2-Rhea
 3-Zara
 4-Luna
 5-Mia
-(Write the number of the chosen room!): """)
+(Skriv numret på det valda rummet!): """)
         if room_choice == "1":
             if Finnpointtally >= -19:
-                print(f"\n*{name} sneaks in Finn's room*")
-                input("\nPress Enter..")
+                print(f"\n*{name} smyger in i Finns rum*")
+                input("\nTryck på Enter..")
                 Finn(name)
             else:
-                print("\nThe door is locked")
-                input("\nPress Enter..")
+                print("\nDörren är låst")
+                input("\nTryck på Enter..")
         elif room_choice == "2":
             if Rheapointtally >= 0:
-                print(f"\n*{name} sneaks in Rhea's room*")
-                input("\nPress Enter..")
+                print(f"\n*{name} smyger in i Rheas rum*")
+                input("\nTryck på Enter..")
                 Rheascene1(name)
                 if Rheapointtally>=0:
-                    input("\nPress Enter..")
+                    input("\nTryck på Enter..")
                     Rheascene2(name)
                 else:
-                    print("\nThe door is locked")
-                    input("\nPress Enter..")
+                    print("\nDörren är låst")
+                    input("\nTryck på Enter..")
             else:
-                print("\nThe door is locked")
-                input("\nPress Enter..")
+                print("\nDörren är låst")
+                input("\nTryck på Enter..")
         elif room_choice == "3":
             if Zarapointtally >= 0:
-                print(f"\n*{name} sneaks in Zara's room*")
-                input("\nPress Enter..")
+                print(f"\n*{name} smyger in i Zaras rum*")
+                input("\nTryck på Enter..")
                 zara_room(name)
                 if Zarapointtally >= 0:
                     zara_join(name)
                     if Zarapointtally >= 0:
                         zara_movie(name)
                     else:
-                        print("\nSeems like you got kicked out")
-                        input("\nPress Enter..")
+                        print("\nDet verkar som att du blev utkastad")
+                        input("\nTryck på Enter..")
                 else:
-                    print("\nSeems like you got kicked out")
-                    input("\nPress Enter..")
+                    print("\nDet verkar som att du blev utkastad")
+                    input("\nTryck på Enter..")
             else:
-                print("\nThe door is locked")
-                input("\nPress Enter..")
+                print("\nDörren är låst")
+                input("\nTryck på Enter..")
 
         elif room_choice == "4":
             if Lunapointtally >= 0:
-                print(f"\n*{name} knocks on Luna' door but no one answeres*")
-                input("\nPress Enter..")
+                print(f"\n*{name} knackar på Lunas dörr men ingen svarar*")
+                input("\nTryck på Enter..")
             else:
-                print("\nThe door is locked")
-                input("\nPress Enter..")
+                print("\nDörren är låst")
+                input("\nTryck på Enter..")
         elif room_choice == "5":
             if Miapointtally >= 0:
-                print(f"\n*{name} sneaks in Mia's room*")
-                input("\nPress Enter..")
+                print(f"\n*{name} smyger in i Mias rum*")
+                input("\nTryck på Enter..")
                 mia_room(name)
             else:
-                print("\nThe door is locked")
-                input("\nPress Enter..")
+                print("\nDörren är låst")
+                input("\nTryck på Enter..")
         
-    print(f"\nNot an available room {name} you stupid fuck")
-    input("\nPress Enter..")
-    print("wait... is that a light?")
-    input("\nPress Enter..")
+    print(f"\nInte ett tillgängligt rum, {name}, din dumma jävel")
+    input("\nTryck på Enter..")
+    print("Vänta... är det ett ljus?")
+    input("\nTryck på Enter..")
     print("▄▄▄█████▓ ██░ ██ ▓█████    ▓█████  ███▄    █ ▓█████▄ ")
     time.sleep(0.07)
     print("▓  ██▒ ▓▒▓██░ ██▒▓█   ▀    ▓█   ▀  ██ ▀█   █ ▒██▀ ██▌")
@@ -282,278 +286,277 @@ def hallway(name):
     print("          ░  ░  ░   ░  ░      ░  ░         ░    ░    ")
     time.sleep(0.07)
     print("                                              ░      ")
-    input("\nPress Enter..")
+    input("\nTryck på Enter..")
     print("Oh father... forgive me..")
 
-
-def Rheascene1 (name):
+def Rheascene1(name):
     global Rheapointtally
-    print(f"\n*{name} enters Rhea's room, you quickly scan the room and catch Rhea doing her morning routine.*")
+    print(f"\n*{name} går in i Rheas rum, du snabbt scannar rummet och ser Rhea göra sin morgonrutin.*")
     
     while True:
-        choice1 = input('''\nWhat do you do? 
-1. Join in 
-2. Stare 
-3. Smash
+        choice1 = input('''\nVad gör du? 
+1. Gå med 
+2. Stirra 
+3. Slå till
 ''')
         if choice1 == "1":
-            print(f"\n*{name} asks to join Rhea's yoga session, she nods and you join in*")
+            print(f"\n*{name} frågar om hen får gå med i Rheas yogapass, hon nickar och du går med*")
             Rheapointtally += 2
             print(f"\n{Rheapointtally}")
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
             break
         elif choice1 == "2":
-            print(f"\n*{name} stands and creeps on Rhea, she notices you staring and mutters to herself* \n-What a wierdo.")
+            print(f"\n*{name} står och smygtittar på Rhea, hon märker att du stirrar och muttrar för sig själv* \n-Vilken konstig typ.")
             Rheapointtally -= 2
             print(f"\n{Rheapointtally}")
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
             break
         elif choice1 == "3":
-            print(f"\n*{name} runs up and hit Rhea across the head causing her to get a headache, she rubs her head in confusion* \n-WTH HELL IS WRONG WITH YOU? \n*She yells at you. {name} decides to apolegize, she forgives you but will not forget your actions*")
+            print(f"\n*{name} springer fram och slår Rhea över huvudet, vilket ger henne huvudvärk, hon gnuggar sitt huvud i förvirring* \n-VAD FAN ÄR FEL PÅ DIG? \n*Hon skriker på dig. {name} bestämmer sig för att be om ursäkt, hon förlåter dig men kommer inte glömma dina handlingar*")
             Rheapointtally -= 3
             print(f"\n{Rheapointtally}")
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
             break
         else:
-            print("\nPlese enter one of the available numbers!")
-            input("\nPress Enter..")
+            print("\nVänligen ange ett av de tillgängliga numren!")
+            input("\nTryck på Enter..")
 
-def Rheascene2 (name):
+def Rheascene2(name):
     global Rheapointtally
-    print(f"\nSo whats your favorite position in yoga {name}? *Rhea asks trying to strike conversation*")
+    print(f"\nSå vad är din favoritställning i yoga, {name}? *Rhea frågar och försöker starta en konversation*")
     
     while True:
-        choice2 = input('''\nWhats your response?
-1. Downward dog 
+        choice2 = input('''\nVad är ditt svar?
+1. Nedåthund 
 2. Doggystyle
-3. I prefer dancing
+3. Jag föredrar dans
 ''')
         if choice2 == "1":
-            print(f"\nReally, what a coincedence thats my favorite too. *Time passes and {name} decides to leave her room*")
+            print(f"\nVerkligen, vilket sammanträffande, det är också min favorit. *Tiden går och {name} bestämmer sig för att lämna hennes rum*")
             Rheapointtally += 3
             print(f"\n{Rheapointtally}")
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
             hallway(name)
             break
         if choice2 == "2":
-            print(f"\n*Rhea gives {name} a look of disgust, and asks you to leave her room*")
+            print(f"\n*Rhea ger {name} en avskyvärd blick och ber dig lämna hennes rum*")
             Rheapointtally -= 5
             print(f"\n{Rheapointtally}")
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
             hallway(name)
             break
         if choice2 == "3":
-            print(f"\nReally i didnt take you for a dancer. I challange you to a dance battle!")
-            input("\nPress Enter..")
+            print(f"\nVerkligen, jag tog dig inte för en dansare. Jag utmanar dig till en dansstrid!")
+            input("\nTryck på Enter..")
             Rheapointtally += 4
             
             while True:
-                choice3 = input(f'''\nRhea challanges {name} to a dance battle she begins to floss, what is your next move?
-        1. Lose intentionally
-        2. Win and embarres her
-        3. Have a fun battle
+                choice3 = input(f'''\nRhea utmanar {name} till en dansstrid, hon börjar flossa, vad är ditt nästa drag?
+        1. Förlora med flit
+        2. Vinn och gör henne generad
+        3. Ha en rolig strid
         ''')
                 if choice3 == "1":
-                    print(f"\n*Rhea notices {name} going easy on her and gets dissapointed. {name} leaves her room*")
+                    print(f"\n*Rhea märker att {name} håller tillbaka och blir besviken. {name} lämnar hennes rum*")
                     Rheapointtally -= 2
                     print(f"\n{Rheapointtally}")
-                    input("\nPress Enter..")
+                    input("\nTryck på Enter..")
                     hallway(name)
                     break
                 if choice3 == "2":
-                    print(f"\n*{name} goes crazy and get sturdy on her ass, she smiles as you defeat her and blows {name} a kiss as you leave her room*")
+                    print(f"\n*{name} går loss och dansar hårt, hon ler när du besegrar henne och blåser {name} en kyss när du lämnar hennes rum*")
                     Rheapointtally += 4
                     print(f"\n{Rheapointtally}")
-                    input("\nPress Enter..")
+                    input("\nTryck på Enter..")
                     hallway(name)
                     break
                 if choice3 == "3":
-                    print(f"\n*{name} start dancing matching her tempo creating a fun and flirty atmopshere, she kisses {name}'s cheek before you leave her room*")
+                    print(f"\n*{name} börjar dansa och matchar hennes tempo, skapar en rolig och flörtig atmosfär, hon kysser {name} på kinden innan du lämnar hennes rum*")
                     print(f"\n{Rheapointtally}")
-                    input("\nPress Enter..")
+                    input("\nTryck på Enter..")
                     hallway(name)
                     break
                 else: 
-                     print("\nPlese enter one of the available numbers!")
-                     input("\nPress Enter..")
+                     print("\nVänligen ange ett av de tillgängliga numren!")
+                     input("\nTryck på Enter..")
             break
         else:
-            print("\nPlese enter one of the available numbers!")
-            input("\nPress Enter..")  
+            print("\nVänligen ange ett av de tillgängliga numren!")
+            input("\nTryck på Enter..")  
 
 def Finn(name):
     global Finnpointtally
-    print(f"\nFinn runs at {name} at full speed overwhelming him with love")
-    input("\nPress Enter..")
+    print(f"\nFinn springer mot {name} i full fart och överväldigar honom med kärlek")
+    input("\nTryck på Enter..")
     
     while True:
         while True:
-            choice1=input(f"""\n{name} is greeted with the following choices:
-1-Pet him
-2-Pounce on him
-3-Push him away
+            choice1=input(f"""\n{name} möts av följande val:
+1-Klappa honom
+2-Hoppa på honom
+3-Pusha bort honom
 
 """)
             if choice1 == "1":
                 print("\n*Han lutar sig närmare med ett lekfullt leende, kisar nöjt med ögonen och suckar mjukt* \nÅh, fortsätt så där, du vet verkligen hur man behandlar en stjärna!")
                 Finnpointtally += 2
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 break
             elif choice1 == "2":
-                print("\n*Han tjuter till av glädje när du pouncar på honom, fångar dig i en dramatisk omfamning och skrattar varmt* \nOoooh! Vilken entré! Jag älskar det  \nGör om det, gör det igen!")
+                print("\n*Han tjuter till av glädje när du hoppar på honom, fångar dig i en dramatisk omfamning och skrattar varmt* \nOoooh! Vilken entré! Jag älskar det  \nGör om det, gör det igen!")
                 Finnpointtally += 3
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 break
             elif choice1 == "3":
                 print("\n*Han kippar efter andan, tar ett dramatiskt steg bakåt och lägger handen över hjärtat som om du just förolämpat hans själ* \nVA?! Hur vågar du?! Jag är ömtålig, du kan ju ha förstört min aura!")
                 Finnpointtally -= 10
-                input("\nPress Enter..")
+                input("\nTryck på Enter..")
                 hallway(name)
                 break
             else:
-                print("\nstupid is there anything other than 1 2 3 here?")
-                input("\nPress Enter..")
+                print("\nÄr du dum eller? Finns det något annat än 1, 2, 3 här?")
+                input("\nTryck på Enter..")
     
         if Finnpointtally >= 6:
-            print(f"\nFinn's love towards {name} is {Finnpointtally} points")
-            input("\nPress Enter..")
+            print(f"\nFinns kärlek mot {name} är {Finnpointtally} poäng")
+            input("\nTryck på Enter..")
             break
         elif 5 <= Finnpointtally <= 0:
-            print(f"\nFinn is neutral towards {name}")
-            input("\nPress Enter..")
+            print(f"\nFinn är neutral mot {name}")
+            input("\nTryck på Enter..")
             break
         else:
-            print(f"\nFinn's dislike towards {name} is {Finnpointtally} points")
-            input("\nPress Enter..")
+            print(f"\nFinns ogillande mot {name} är {Finnpointtally} poäng")
+            input("\nTryck på Enter..")
             break
     
-    print("\nYou spend a little time in finns room")
-    input("\nPress enter to continue")
-    print("\n*Han ler lekfullt, gör en dramatisk bugning*\n Hur må jag servera dig, min stjärna?")
+    print("\nDu tillbringar lite tid i Finns rum")
+    input("\nTryck på Enter för att fortsätta")
+    print("\n*Han ler lekfullt, gör en dramatisk bugning*\n Hur kan jag stå till tjänst, min stjärna?")
     
     while True:
-        choice2=input(f"""\n{name} is very lost between these choices
-1-Vissa min tumma och säga sug på den
-2-Jag hellre servera dig älskling
+        choice2 = input(f"""\n{name} är väldigt förvirrad mellan dessa val:
+1-Visa min tumme och säg sug på den
+2-Jag föredrar att servera dig, älskling
 """)
         if choice2 == "1":
-            print("\n*Han höjer ett ögonbryn, ler förföriskt och tar försiktigt din finger mellan läpparna* \nMmm… farligt frestande")
+            print("\n*Han höjer ett ögonbryn, ler förföriskt och tar försiktigt ditt finger mellan läpparna* \nMmm… farligt frestande")
             Finnpointtally += 4
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
             break
         elif choice2 == "2":
             print("\n*Han kippar efter andan, lägger en hand dramatiskt över hjärtat* \nUrsäkta?! Jag är den som serverar glamour här!")
             Finnpointtally -= 5
-            input("\nPress Enter..")
+            input("\nTryck på Enter..")
             break
         else:
-            print(f"\n{name} they said you were the king of dumbtowm")
-            input("\nPress Enter..")
+            print(f"\n{name}, de sa att du var kungen av dumhet")
+            input("\nTryck på Enter..")
 
     if 23 >= Finnpointtally >= 8:
         print(f"\n*Han ler varmt, lutar sig bekvämt tillbaka och sträcker ut en hand mot dig* \nMmm, det här var mysigt. Kom snart tillbaka, okej? Jag gillar att ha dig här")
-        input("\nPress Enter..")
+        input("\nTryck på Enter..")
     elif 7 >= Finnpointtally >= 0:
         print(f"\n*Han ser på dig med en sned blick, spelar med en ring på fingret och suckar* \nHmpf… jag antar att det kunde ha varit värre. Men du har en lång väg att gå, älskling")
-        input("\nPress Enter..")
+        input("\nTryck på Enter..")
     elif Finnpointtally <= -1:
         print(f"\n*Han vänder demonstrativt ryggen till, armarna i kors, och suckar dramatiskt* \nUgh! Jag trodde du förstod mig, men tydligen inte. Gå. Innan jag blir ännu mer besviken")
-        input("\nPress Enter..")
+        input("\nTryck på Enter..")
     elif Finnpointtally >= 24:
         print("*Han stirrar på dig ett ögonblick, som om han just insett något otroligt*")
-        input("\nPress Enter..")
+        input("\nTryck på Enter..")
         print("*Sedan spricker han upp i ett leende, ett äkta, mjukt leende som är annorlunda från hans vanliga lekfulla smil*")
-        input("\nPress Enter..")
+        input("\nTryck på Enter..")
         print("Så det är så här det känns… att verkligen hitta någon...")
-        input("\nPress Enter..")
+        input("\nTryck på Enter..")
         print("*Han tar din hand, smeker den försiktigt med tummen och ser dig djupt i ögonen*")
-        input("\nPress Enter..")
+        input("\nTryck på Enter..")
         print("Ingen mer lek, ingen mer fasad. Bara du och jag… för alltid.")
 
 def zara_room(name):
     global Zarapointtally
-    print(f"\n*{name} enters the room, Zara looks up and greets you.*")
+    print(f"\n*{name} går in i rummet, Zara tittar upp och hälsar på dig.*")
 
     while True:
-        choice = input('''\nHow do you greet her?
-1. Hug
-2. Nod head
-3. Shake hands
+        choice = input('''\nHur hälsar du på henne?
+1. Kram
+2. Nicka med huvudet
+3. Skaka hand
 ''')
         if choice == "1":
-            print(f"\n*{name} hugs Zara, she smiles warmly.*")
+            print(f"\n*{name} ger Zara en kram, hon ler varmt.*")
             Zarapointtally += 3
             break
         elif choice == "2":
-            print(f"\n*{name} nods at Zara, she nods back with a polite smile.*")
+            print(f"\n*{name} nickar mot Zara, hon nickar tillbaka med ett artigt leende.*")
             Zarapointtally += 2
             break
         elif choice == "3":
-            print(f"\n*{name} shakes Zara's hand, she looks a bit confused but goes along with it.*")
+            print(f"\n*{name} skakar hand med Zara, hon ser lite förvirrad ut men går med på det.*")
             Zarapointtally -= 2
             break
         else:
-            print("\nPlease enter one of the available numbers!")
+            print("\nVänligen ange ett av de tillgängliga numren!")
 
 def zara_join(name):
     global Zarapointtally
-    print(f"\n*Zara sits down and invites {name} to join her.*")
+    print(f"\n*Zara sätter sig ner och bjuder in {name} att gå med henne.*")
 
     while True:
-        choice = input('''\nWhat do you do?
-1. Act indifferent
-2. Act interested
+        choice = input('''\nVad gör du?
+1. Var likgiltig
+2. Visa intresse
 ''')
         if choice == "1":
-            print(f"\n*{name} acts indifferent, Zara feels offended and asks you to leave.*")
-            print("You got kicked out of the room.")
+            print(f"\n*{name} beter sig likgiltigt, Zara känner sig förolämpad och ber dig lämna rummet.*")
+            print("Du blev utkastad från rummet.")
             Zarapointtally -= 5
             break
         elif choice == "2":
-            print(f"\n*{name} shows interest in what Zara is doing. She smiles and suggests watching a movie together.*")
+            print(f"\n*{name} visar intresse för vad Zara gör. Hon ler och föreslår att ni ska titta på en film tillsammans.*")
             zara_movie(name)
             break
         else:
-            print("\nPlease enter one of the available numbers!")
+            print("\nVänligen ange ett av de tillgängliga numren!")
 
 def zara_movie(name):
     global Zarapointtally
-    print(f"\n*{name} and Zara watch a movie together, creating a warm and friendly atmosphere.*")
-    print(f"\n*Zara seems impressed by your company.*")
+    print(f"\n*{name} och Zara tittar på en film tillsammans, skapar en varm och vänlig atmosfär.*")
+    print(f"\n*Zara verkar imponerad av ditt sällskap.*")
     Zarapointtally += 3
     if Zarapointtally > 5:
-        print("\nCongratulations! You won Zara's love.")
+        print("\nGrattis! Du vann Zaras kärlek.")
     elif Zarapointtally > 0:
-        print("\nYou left a positive impression on Zara.")
+        print("\nDu gjorde ett positivt intryck på Zara.")
     else:
-        print("\nYou might need to work on your social skills!")
+        print("\nDu kanske behöver jobba på dina sociala färdigheter!")
 
 def mia_room(name):
     global Miapointtally
-    print(f"\n*{name} enters the room, Mia looks up.*")
+    print(f"\n*{name} går in i rummet, Mia tittar upp.*")
 
     while True:
-        choice = input('''\nHow do you greet her?
-1. Greet politely
-2. Greet aggressively
+        choice = input('''\nHur hälsar du på henne?
+1. Hälsa artigt
+2. Hälsa aggressivt
 ''')
         if choice == "1":
-            print(f"\n*{name} greets Mia politely, but she does not respond.*")
+            print(f"\n*{name} hälsar artigt på Mia, men hon svarar inte.*")
             Miapointtally += 0
             break
         elif choice == "2":
-            print(f"\n*{name} greets Mia aggressively, she frowns and suddenly knocks you out.*")
+            print(f"\n*{name} hälsar aggressivt på Mia, hon rynkar pannan och slår plötsligt ut dig.*")
             Miapointtally += 2
-            print("\nYou gain +2 points but get kicked out.")
+            print("\nDu får +2 poäng men blir utkastad.")
             break
         else:
-            print("\nPlease enter one of the available numbers!")
+            print("\nVänligen ange ett av de tillgängliga numren!")
     
     if Miapointtally > 1:
-        print("\nCongratulations! You gained some points, but at a cost.")
+        print("\nGrattis! Du fick några poäng, men till ett pris.")
     elif Miapointtally == 0:
-        print("\nZara is indifferent to your presence.")
+        print("\nZara är likgiltig inför din närvaro.")
     else:
-        print("\nYou might need to rethink your approach!")
+        print("\nDu kanske behöver tänka om din strategi!")
 
 guide(username)
