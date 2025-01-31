@@ -228,12 +228,6 @@ def hallway(name):
                 print(f"\n*{name} smyger in i Rheas rum*")
                 input("\nTryck på Enter..")
                 Rheascene1(name)
-                if Rheapointtally>=0:
-                    input("\nTryck på Enter..")
-                    Rheascene2(name)
-                else:
-                    print("\nDörren är låst")
-                    input("\nTryck på Enter..")
             else:
                 print("\nDörren är låst")
                 input("\nTryck på Enter..")
@@ -310,7 +304,7 @@ def Rheascene1(name):
 ''')
         if choice1 == "1":
             print(f"\n*{name} frågar om hen får gå med i Rheas yogapass, hon nickar och du går med*")
-            Rheapointtally += 2
+            Rheapointtally += 10 #Ändra till 4 
             print(f"\n{Rheapointtally}")
             input("\nTryck på Enter..")
             break
@@ -329,9 +323,7 @@ def Rheascene1(name):
         else:
             print("\nVänligen ange ett av de tillgängliga numren!")
             input("\nTryck på Enter..")
-
-def Rheascene2(name):
-    global Rheapointtally
+    
     print(f"\nSå vad är din favoritställning i yoga, {name}? *Rhea frågar och försöker starta en konversation*")
     
     while True:
@@ -340,6 +332,7 @@ def Rheascene2(name):
 2. Doggystyle
 3. Jag föredrar dans
 ''')
+
         if choice2 == "1":
             print(f"\nVerkligen, vilket sammanträffande, det är också min favorit. *Tiden går och {name} bestämmer sig för att lämna hennes rum*")
             Rheapointtally += 3
@@ -357,8 +350,8 @@ def Rheascene2(name):
         if choice2 == "3":
             print(f"\nVerkligen, jag tog dig inte för en dansare. Jag utmanar dig till en dansstrid!")
             input("\nTryck på Enter..")
-            Rheapointtally += 4
-            
+            Rheapointtally += 10
+          
             while True:
                 choice3 = input(f'''\nRhea utmanar {name} till en dansstrid, hon börjar flossa, vad är ditt nästa drag?
         1. Förlora med flit
@@ -368,20 +361,20 @@ def Rheascene2(name):
                 if choice3 == "1":
                     print(f"\n*Rhea märker att {name} håller tillbaka och blir besviken. {name} lämnar hennes rum*")
                     Rheapointtally -= 2
-                    print(f"\n{Rheapointtally}")
+                    print(f"\nRheas kärlek nivå för dig är{Rheapointtally}")
                     input("\nTryck på Enter..")
                     hallway(name)
                     break
                 if choice3 == "2":
                     print(f"\n*{name} går loss och dansar hårt, hon ler när du besegrar henne och blåser {name} en kyss när du lämnar hennes rum*")
                     Rheapointtally += 4
-                    print(f"\n{Rheapointtally}")
+                    print(f"\nRheas kärlek nivå för dig är {Rheapointtally}")
                     input("\nTryck på Enter..")
                     hallway(name)
                     break
                 if choice3 == "3":
                     print(f"\n*{name} börjar dansa och matchar hennes tempo, skapar en rolig och flörtig atmosfär*")
-                    print(f"\n{Rheapointtally}")
+                    print(f"\nRheas kärlek nivå för dig är {Rheapointtally}")
                     input("\nTryck på Enter..")
                     hallway(name)
                     break
